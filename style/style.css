@@ -1,0 +1,261 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+.navbar {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.navbar__list a {
+  display: block;
+  text-decoration: none;
+  color: #32502E;
+  padding: 0.5rem 0;
+  border-top: 1px solid #222;
+}
+
+.show-navbar .header {
+  border-bottom: 2px double #222;
+}
+.show-navbar .bars__line:first-child {
+  transform: rotate(-45deg);
+}
+.show-navbar .bars__line:last-child {
+  transform: rotate(45deg);
+}
+.show-navbar .bars__line:nth-child(2) {
+  opacity: 0;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: auto !important;
+  }
+  .navbar__list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 1rem;
+  }
+  .navbar__list li {
+    padding: 0 1rem;
+  }
+  .navbar__list a {
+    display: block;
+    white-space: nowrap;
+    border: none;
+    transition: all 0.1s ease;
+  }
+  .navbar__list a:hover {
+    transform: scale(1.1);
+  }
+}
+.main__header {
+  width: 100%;
+  z-index: 99999;
+  background-color: #F7F7F7;
+  box-shadow: 0 0 3px #222;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.header__title {
+  font-weight: 700;
+  color: #F58634;
+  text-decoration: none;
+  color: #468c04;
+}
+
+.bars__line {
+  height: 0.1rem;
+  width: 15px;
+  background-color: #222;
+  transform-origin: 100%;
+  transition: all 0.4s ease;
+}
+.bars__line + .bars__line {
+  margin-top: 0.2rem;
+}
+
+@media (min-width: 768px) {
+  .main__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header {
+    padding: 1.25rem 0 1.25rem 2rem;
+    width: auto;
+    margin: 0;
+  }
+  .header__title {
+    font-size: 1.25rem;
+  }
+  .header__button {
+    display: none;
+  }
+}
+.main {
+  position: relative;
+}
+.main__content {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid #32502E;
+}
+.main__title {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  color: #32502E;
+}
+.main__button {
+  display: inline-block;
+  background-color: #ffd885;
+  color: #32502E;
+  padding: 0.75em 2em;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+.main__button:hover {
+  background-color: #32502E;
+  color: #ffd885;
+}
+
+@media (min-width: 768px) {
+  .main {
+    height: 350px;
+    background-image: url("../images/header__pexels-lucas-pezeta-2829936.jpg");
+    object-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .main__image {
+    max-height: 100vh;
+    opacity: 0;
+  }
+  .main__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+  }
+  .main__title {
+    color: #F7F7F7;
+    font-size: 4rem;
+  }
+  .main__button {
+    font-size: 1rem;
+  }
+}
+.section {
+  padding: 4rem 0 3rem;
+}
+.section__image {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+.section p {
+  text-align: justify;
+  text-indent: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.25px;
+}
+
+@media (min-width: 768px) {
+  .section__image {
+    float: right;
+    padding: 0 0 0.5rem 1rem;
+    margin: 0;
+    max-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .section__image {
+    max-width: 500px;
+  }
+}
+.footer {
+  padding: 2rem 0;
+  background-color: #f3eff4;
+}
+.footer__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #32502E;
+}
+.footer__links {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+.footer__links:hover {
+  opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .container {
+    width: 100%;
+    padding: 0 2rem 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
