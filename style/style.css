@@ -50,6 +50,7 @@ ul {
   color: #32502E;
   padding: 0.5rem 0;
   border-top: 1px solid #222;
+  font-size: 1.05rem;
 }
 
 .show-navbar .header {
@@ -85,6 +86,7 @@ ul {
     padding: 0 1rem;
   }
   .navbar__list a {
+    font-size: 1.1rem;
     display: block;
     white-space: nowrap;
     border: none;
@@ -108,6 +110,7 @@ ul {
   padding: 1rem 0;
 }
 .header__title {
+  font-size: 1.1rem;
   font-weight: 700;
   color: #F58634;
   text-decoration: none;
@@ -122,7 +125,7 @@ ul {
   transition: all 0.4s ease;
 }
 .bars__line + .bars__line {
-  margin-top: 0.2rem;
+  margin-top: 0.245rem;
 }
 
 @media (min-width: 768px) {
@@ -133,7 +136,7 @@ ul {
   }
 
   .header {
-    padding: 1.25rem 0 1.25rem 2rem;
+    padding: 1.25rem 0 1.35rem 2rem;
     width: auto;
     margin: 0;
   }
@@ -156,19 +159,6 @@ ul {
   font-size: 2rem;
   padding-bottom: 0.5rem;
   color: #32502E;
-}
-.main__button {
-  display: inline-block;
-  background-color: #ffd885;
-  color: #32502E;
-  padding: 0.75em 2em;
-  letter-spacing: 1px;
-  border-radius: 3px;
-  transition: all 0.4s ease;
-}
-.main__button:hover {
-  background-color: #32502E;
-  color: #ffd885;
 }
 
 @media (min-width: 768px) {
@@ -194,9 +184,6 @@ ul {
     color: #F7F7F7;
     font-size: 4rem;
   }
-  .main__button {
-    font-size: 1rem;
-  }
 }
 .section {
   padding: 4rem 0 3rem;
@@ -208,10 +195,12 @@ ul {
   margin: 0 auto 1rem;
 }
 .section p {
+  font-size: 1.13rem;
   text-align: justify;
   text-indent: 3rem;
   margin-bottom: 1rem;
   letter-spacing: 0.25px;
+  line-height: 1.5;
 }
 
 @media (min-width: 768px) {
@@ -221,11 +210,9 @@ ul {
     margin: 0;
     max-width: 300px;
   }
-
-  /*     .intramuros {
-          float: left;
-          padding: 0 1rem .5rem 0;
-      } */
+  .section p {
+    font-size: 1.25rem;
+  }
 }
 .footer {
   padding: 2rem 0;
@@ -240,18 +227,21 @@ ul {
   display: block;
   text-decoration: none;
   margin-bottom: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #222;
   letter-spacing: 0.5px;
 }
 .footer__links:hover {
-  opacity: 0.75;
+  color: #32502E;
 }
 
 @media (min-width: 768px) {
   .footer__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .footer__links {
+    font-size: 1.1rem;
   }
   .footer .container {
     width: 100%;
